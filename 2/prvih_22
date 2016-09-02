@@ -1,0 +1,164 @@
+Zbirka zadataka 
+ 
+ 
+       
+1.	Deklarisati 4 varijable, dodeliti im proizvoljne numeričke vrednosti. Pomoću console.log funkcije ispišite zbir prve i treće varijable, ispišite zatim rezultat deljenja druge i četvrte varijable. 
+ 
+
+ 
+2.	Ako su deklarisane varijable var a = 4, b = 44, c = 24, d = "44". Napišite koji je rezultat operacija ( true ili false ): 
+a)	console.log( (a > c) ); 
+b)	console.log( (a > b) || (b > c) );  
+c)	console.log( (a < b) && (a < c) ); 
+d)	console.log( (c > b) && (b < a) ); 
+e)	console.log( !(a > b) || ( (a > c) && (c > b) ) ); 
+f)	console.log( !(a > b) ); 
+g)	console.log( (b === d) ); 
+ 
+3.	Unesite 3 broja. Ukoliko su svi veći od 10, ispišite njihov zbir. U suprotnom ispitajte koji je od njih najveći pa ga pomnožite sa samim sobom te nakon toga ispišite njihov zbir 
+ 
+4.	Ako su deklarisane varijable var a = 12, b = 13, c = "12", d = "13"; Napišite šta će se ispisati: 
+if( a < b ) { 
+	 	if( b < d ) { 
+	 	 	console.log("log 1") 
+ 	} else {  	 	if( a < d ) { 
+	 	 	 	console.log("log 2"); 
+	 	 	} else { 
+	 	 	 	console.log("log 3"); 
+	 	 	} 
+	 	} 
+} else { 
+	 	if( c > a ) { 
+	 	 	console.log("log 4"); 
+ 	} else {  	 	if(b > c) { 
+	 	 	 	console.log("log 5"); 
+	 	 	} else { 
+	 	 	 	console.log("log 6"); 
+	 	 	} 
+	 	} 
+} 
+ 	 
+5.	Zatražiti od korisnika unos njegove godine rođenja. Izračunati starost korisnika i ispisati odgovarajuću poruku (‘Punoletni ste’/’Niste punoletni’). Ne uzeti u obzir ako korisnik unese nevaljanu godinu (npr. 2016) - u tom slučaju ispisati odgovarajuću poruku. 
+ 
+6.	Zatražiti od korisnika unos godine proizvodnje njegovog automobila. Izračunati starost automobila te ukoliko je stariji od 30 godina, ispisati ‘Oldtimer’, a ukoliko je mlađi od 5 godina ispisati ‘Newbie’. Ne uzeti u obzir ako korisnik unese nevaljanu godinu (npr. 2016) - u tom slučaju ispisati odgovarajuću poruku. 
+ 
+7.	Zatražiti od korisnika da unese svoje ime, prezime i broj godina. Ukoliko je korisnik mlađi od 20, ispišite: Ime + prezime + '', veoma ste mladi!''. Ukoliko je korisnik mlađi od 30, ispišite: Ime + prezime + '', mladi ste!''. Ukoliko je korisnik između 30 i 45, ispišite: Ime + prezime + '', u najboljim ste godinama! ''. Stare osobe nemojte komentarisati. 
+ 
+8.	Zatražiti od korisnika da unese ime i broj godina. Ponovite to 3 puta. Ukoliko postoje 2 osobe istih godina, ispišite njihova imena. U suprotnom proverite postoje li 2 osobe istog imena, ako postoje, ispišite njihovo ime te zbir godina. Ukoliko nijedno nije zadovoljeno, ispišite da nema imenjaka ni vršnjaka! 
+ 
+9.	Zatražiti od korisnika da unese 3 ocene. Ukoliko je jedna od njih 1, ispišite ''Niste zadovoljili''. U suprotnom, saberite sve 3 ocene i izračunajte prosek. Ukoliko je prosek manji od 2.5, ispišite ''Dovoljan 2'', za prosek između 2.5 i 3.5 ispišite ''Dobar 3'', za prosek između 3.5 i 4.5 ispišite ''Vrlo dobar 4'', za prosek iznad 4.5 ispišite ''Odličan 5''. 
+ 
+10.	Zatražiti od korisnika da unese odgovor na pitanje ''Bojite li se zubara?''. Ukoliko je odgovor negativan, ispišite ''Hrabri ste!!'', u suprotnom, ispišite ''I ja!!''. Za ostale odgovore ispisati da je unos nepravilan. Ovaj zadatak rešiti preko switch-case-a. 
+ 
+var odg = prompt("Bojite li se zubara?"); 
+ 
+odg = odg.toLowerCase(); switch (odg) {     case "ne":         console.log("Hrabri ste!");         break;     case "da":         console.log("I ja!!!");         break;     default: 
+        console.log("Unos je pogrešan!"); 
+} 
+ 
+11.	Zatražiti od korisnika da unese broj manji od 25. Preko switch-case-a proveriti je li uneseni broj sadržilac broja 5 (to su brojevi 5, 10, 15 i 20). Ukoliko jeste, ispišite uneseni broj, ukoliko nije, ispišite da broj nije sadržilac broja 5. Za sve druge brojeve koji nisu između 0 i 20 ispišite da je unesen pogrešan broj. 
+ 
+12.	Ako je unesen dan u sedmici, pomoću switch case-a ispišite: ako je ponedeljak, utorak sreda ili četvrtak “Kada će više vikend”, za petak “It's Friday, Friday. Gotta get down on Friday”, ako je subota ili nedelja “Jej, vikend je!”. Ako je uneseno nešto drugo, ispišite “Pogrešan unos”. 
+ 
+13.	Zatražiti od korisnika da unese neki tekst. Izračunati koliko reči ima unutar unesenog teksta. 
+ 
+var text = prompt("Unesite neki tekst"); var brojac = 1; for(var i = 0; i < text.length; i++) {     if(text[i] == " ") {         brojac++; 
+    } 
+} 
+console.log("Uneli ste tekst koji se sastoji od " + brojac + " reči!"); 
+ 
+14.	Uneti celi broj preko prompt funkcije. Nakon toga preko for petlje sabrati sve brojeve od 1 do unesenog broja, te ispisati rezultat. 
+ 
+var broj = parseInt(prompt("Unesite broj")); var suma = 0; 
+for(var i = 1; i < broj ; i++) {     suma += i; 
+} 
+console.log(suma); 
+ 
+15.	Zatražiti od korisnika da unose broj manji od 20. Zatim ispisati sve brojeve od unesenog broja do 1. Ako je uneo veći broj, ispisati uneseni broj. 
+ 
+16.	Zatražiti od korisnika da unese broj. Ukoliko je paran, ispisati sve brojeve unazad od unesenog do 1, u suprotnom, sabrati sve brojeve od 1 do unesenog broja. 
+ 
+17.	Učitati dva broja, zatim ispisati svaki drugi broj između njih koji je deljiv sa 2 i 3. 
+ 
+18.	Zatražiti unos dvocifrenog broja. Ispisati sve njegove delitelje. Ako nije dvocifren, samo treba ispisati odgovarajuću poruku. 
+ 
+19.	Zatražiti unos dvocifrenog broja. Ispisati s kojim je brojevima od 1 do 10 deljiv. Ako nije dvocifren, samo treba ispisati odgovarajuću poruku. 
+ 
+20.	Zatražiti od korisnika unos nekog stringa. Ispisati koliko ima samoglasnika u tom stringu. Ispisati prvih 5 slova unesenog stringa. 
+ 
+21.	Zatražiti od korisnika unos nekog stringa. Ispisati koliko ima suglasnika u tom stringu. Ispisati prva 3 slova unesenog stringa. 
+ 
+22.	Učitati 2 cela broja, koristeći prompt funkciju i izračunati im zbir, razliku, sadržalac i količnik, ispisati sumu svih parnih brojeva između ta 2 broja, te sumu svih neparnih brojeva između njih, ne uključujući njih.   
+23.	Šta će se ispisati: 
+var a = 3, b = 18, c = “6”; 
+ 
+      for( var i = a; i < b; i += 3 ){ 
+        if( i = = c ){ 
+	 	console.log( i + " = " + c ); 
+        } 
+        if( b % i != = 0 ){           console.log( i - 1 ); 
+        }         else{           console.log( i ); 
+        } 
+	      } 	 
+24. Šta će se ispisati: 
+ 
+     var a = 2, b = 20, c = ”6”; 
+ 
+     for( var i = a; i < b; i += 4 ){        if( i === c ){ 
+	 	console.log( i + " = " + c ); 
+       } 
+       if( b % i === 0 ){ 
+         console.log( i ); 
+       }        else{          console.log( i + 1 ); 
+       } 
+     } 
+25.	Šta će se ispisati: 
+ 
+     var j = 80; 
+ 
+     for( var i = 8; i < j; i += 2 ){        if( j % i === 0 ){          console.log( i ); 
+       }        else{ 
+         console.log( j ); 
+       }        j -= 10; 
+     } 
+ 
+26.	Šta će se ispisati: 
+ 
+     var j = 60; 
+ 
+     for( var i = 6; i < j; i += 4 ){        if( j % i !== 0 ){          console.log( j ); 
+       }        else{          console.log( i ); 
+       }        j -= 10; 
+     } 
+27.	Učitati 5 celih dvocifrenih brojeva. Ukoliko uneseni broj nije dvocifren, odbaciti ga. Sabrati zadnje cifre svakog unesenog broja i ispisati zbir.  
+ 
+28.	Zatražiti od korisnika da unosi brojeve sve dok ne unese broj koji je veći od 20. Kada unese taj broj, ispisati iz kojeg je pokušaja unesen broj veći od 20. 
+ 
+29.	Pomoću while petlje omogućite korisniku da unese tačno 8 brojeva. Pomoću console.log funkcije ispišite četvrti unešeni broj te zbir prvog i petog unesenog broja. 
+ 
+30.	Učitavati brojeve sve dok zbir unesenih brojeva ne dosegne 100. Na kraju ispisati koliko je korisnik ukupno uneo brojeva.     
+ 
+31.	Napravite program koji korisniku omogućuje unošenje brojeva sve dok ne unese broj 0. Program treba ispisati koliko je korisnik upisao pozitivnih, a koliko negativnih brojeva.  
+ 
+32.	Zatražiti od korisnika da unese 2 broja. Koristeći do-while petlju ispisati neparne brojeve koji se nalaze između ta dva broja. 
+33.	Preko petlje popunite niz od 10 članova, te ispišite niz. 
+ 
+34.	Deklarisati prazan niz i tražiti od korisnika da unosi brojeve dok suma unesenih članova niza ne pređe 50. Nakon toga ispisati dužinu niza. 
+ 
+35.	Ako imate rečenicu: “Tammy family je najbolje udruženje ikada” izbacite sve samoglasnike iz nje i ispišite rečenicu bez njih. To možete staviti u neku novu varijablu. Potom izbacite sve suglasnike iz iste rečenice te i nju ispišite.  
+ 
+36.	Zadat je niz od 10 realnih brojeva: var niz = [ 87, 93, 11, 27, 38, 100, 42, 31, 8, 40 ] Naći broj najbliži nuli te broj najdalji od nule. 
+ 
+37.	Ako imate deklarisan niz: var array = [15, 123, 678, 23, 797, 905, 769, 567, 67], ispišite prvi, srednji i zadnji element niza. (kod mora raditi za bilo koji niz, nezavisno od broja elemenata).   
+ 
+38.	Učitavati brojeve u niz sve dok im zbir ne pređe 150. Napraviti novi niz sastavljen od neparnih brojeva iz prvog niza. Ispisati novi niz sortiran od najvećeg prema najmanjem. 
+ 
+39.	Učitavati brojeve u niz sve dok im zbir ne pređe 250. Napraviti novi niz sastavljen od parnih brojeva iz prvog niza. Ispisati novi niz sortiran od najmanjeg prema najvećem. 
+ 
+40.	Deklarisati niz koji se sastoji od 5 reči. Napraviti novi niz koji se sastoji samo od onih reči iz prvog niza koje imaju više od 2 slova. Ispisati novi niz reči. 
+ 
+41.	Deklarisati niz koji se sastoji od 5 reči. Ispisati koja je najduža i najkraća reč iz niza. 
+ 	 	 	 	 	 
+42.	Učitati niz od 10 brojeva. Ispisati koliko je parnih, a koliko neparnih brojeva u nizu. Zatim ispisati prosečnu vrednost parnih brojeva. Takođe ispisati koji zbir je veći: zbir parnih brojeva ili zbir neparnih brojeva.  
+
+43.	Učitati niz od 10 brojeva. Ispisati najveći i najmanji član niza, zatim poređati članove niza po veličini - od najvećeg prema najmanjem i ispisati ga, potom od najmanjeg prema najvećem i njega takođe ispisati. 
